@@ -1,30 +1,27 @@
 * {
-    box-sizing: border-box
-}
-
-html {
-    scroll-behavior: smooth
+    box-sizing: border-box;
 }
 
 body {
     margin: 0;
     background: #f7f8fd;
     color: #22263e;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, sans-serif;
 }
 
 .container {
     max-width: 1160px;
     margin: auto;
-    padding: 0 24px
+    padding: 0 24px;
 }
 
+/* Meniu */
 .bara {
     height: 86px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #e9e9f3
+    border-bottom: 1px solid #e9e9f3;
 }
 
 .logo {
@@ -33,200 +30,193 @@ body {
     gap: 3px;
     font-size: 22px;
     font-weight: 800;
-    letter-spacing: -.9px
 }
 
 .logo>span:last-child {
-    color: #7660e8
+    color: #7660e8;
 }
 
 .simbol {
-    display: inline-flex;
+    display: grid;
+    place-items: center;
     width: 38px;
     height: 38px;
-    align-items: center;
-    justify-content: center;
+    margin-right: 10px;
+    border-radius: 12px;
     background: #7962ef;
     color: white;
-    border-radius: 12px;
-    margin-right: 10px;
     font-size: 25px;
-    letter-spacing: 0
 }
 
 .eticheta {
-    font-size: 12px;
-    font-weight: 700;
-    color: #8179a1;
     background: #efedfa;
-    border-radius: 50px;
-    padding: 10px 17px
+    color: #8179a1;
+    border-radius: 30px;
+    padding: 10px 17px;
+    font-size: 12px;
+    font-weight: bold;
 }
 
+/* Partea de sus */
 .introducere {
     display: grid;
     grid-template-columns: 1.05fr .95fr;
     gap: 70px;
     align-items: center;
-    padding: 65px 0 73px
+    padding: 65px 0 73px;
 }
 
 .eticheta-mica {
     display: inline-block;
-    color: #7058de;
-    background: #eeebff;
-    border-radius: 30px;
     padding: 9px 15px;
+    border-radius: 30px;
+    background: #eeebff;
+    color: #7058de;
     font-size: 12px;
-    font-weight: 700
+    font-weight: bold;
 }
 
 .prezentare h1 {
     font-size: clamp(35px, 4.6vw, 59px);
     line-height: 1.12;
-    letter-spacing: -2.3px;
+    letter-spacing: -2px;
     margin: 24px 0 21px;
-    max-width: 580px
 }
 
 .prezentare h1 em {
     font-style: normal;
-    color: #7560e7
+    color: #7560e7;
 }
 
-.prezentare>p {
+.prezentare p {
     max-width: 470px;
     color: #7e8298;
     line-height: 1.9;
     font-size: 16px;
-    margin: 0
 }
 
 .statistici {
     display: flex;
     gap: 28px;
     align-items: center;
-    margin-top: 45px
+    margin-top: 40px;
 }
 
 .statistici>div:not(.linie) {
     display: flex;
     flex-direction: column;
-    gap: 7px
+    gap: 7px;
 }
 
 .statistici strong {
     font-size: 30px;
-    color: #36304f
+    color: #36304f;
 }
 
 .statistici span {
     font-size: 13px;
-    color: #9b9db0
+    color: #9b9db0;
 }
 
-.statistici .linie {
-    height: 41px;
+.linie {
     width: 1px;
-    background: #dddded
+    height: 42px;
+    background: #dddded;
 }
 
+/* Formularul */
 .formular {
-    background: #fff;
+    background: white;
     border: 1px solid #eeecf6;
     border-radius: 23px;
     padding: 32px;
-    box-shadow: 0 22px 60px #39346c12
+    box-shadow: 0 22px 60px #39346c12;
 }
 
 .antet-formular {
     display: flex;
     align-items: center;
     gap: 14px;
-    margin-bottom: 24px
+    margin-bottom: 24px;
 }
 
-.antet-formular .iconita {
-    height: 44px;
+.iconita {
+    display: grid;
+    place-items: center;
     width: 44px;
+    height: 44px;
     border-radius: 13px;
     background: #efeaff;
     color: #715ce4;
     font-size: 27px;
-    display: grid;
-    place-items: center
 }
 
 .antet-formular h2 {
     margin: 0;
     font-size: 21px;
-    letter-spacing: -.6px
 }
 
 .antet-formular p {
-    color: #aaa9ba;
     margin: 6px 0 0;
-    font-size: 12px
+    font-size: 12px;
+    color: #aaa9ba;
 }
 
 label {
     display: block;
     font-size: 13px;
-    font-weight: 700;
-    margin: 18px 0 9px
+    font-weight: bold;
+    margin: 18px 0 9px;
 }
 
-input[type=text] {
+input[type="text"] {
     width: 100%;
-    background: #fbfbfe;
+    padding: 14px 15px;
     border: 1px solid #e6e5f0;
     border-radius: 10px;
-    padding: 14px 15px;
+    background: #fbfbfe;
     font: inherit;
     font-size: 14px;
-    outline: none
 }
 
-input[type=text]:focus {
-    border-color: #8975ed;
-    box-shadow: 0 0 0 3px #8a76ee19
+input[type="text"]:focus {
+    outline: 2px solid #c6bbff;
 }
 
 .zona-upload {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    padding: 25px 15px;
     border: 2px dashed #d9d3f6;
     border-radius: 13px;
     background: #faf9ff;
-    padding: 25px 15px;
     text-align: center;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 7px;
     color: #555272;
-    font-size: 13px
+    font-size: 13px;
 }
 
 .upload-icon {
-    height: 43px;
+    display: grid;
+    place-items: center;
     width: 43px;
+    height: 43px;
     border-radius: 13px;
     background: #ebe7ff;
     color: #806be9;
     font-size: 32px;
-    line-height: 40px;
-    margin-bottom: 5px
 }
 
 .zona-upload small {
-    color: #aaacc0;
-    font-size: 11px
+    color: #9c9db2;
+    font-size: 11px;
 }
 
 .zona-upload input {
     max-width: 100%;
     font-size: 11px;
-    margin-top: 10px;
-    color: #8d8ca6
+    margin: 9px 0 0;
 }
 
 .zona-upload input::file-selector-button {
@@ -234,29 +224,30 @@ input[type=text]:focus {
     border: 0;
     color: #6c5ad9;
     border-radius: 7px;
-    font-weight: bold;
-    font-size: 11px;
     padding: 10px;
     cursor: pointer;
-    margin-right: 8px
 }
 
 .buton-principal {
-    border: 0;
-    background: linear-gradient(110deg, #6e58db, #9079f1);
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 11px;
     width: 100%;
-    font-weight: 700;
-    font-size: 14px;
     margin-top: 23px;
+    padding: 15px;
+    border: 0;
+    border-radius: 11px;
+    background: linear-gradient(110deg, #6e58db, #9079f1);
+    color: white;
+    font-weight: bold;
     cursor: pointer;
-    box-shadow: 0 9px 22px #7560e83b
+    box-shadow: 0 9px 22px #7560e83b;
 }
 
 .buton-principal:hover {
-    filter: brightness(1.06)
+    filter: brightness(1.06);
+}
+
+.buton-principal:disabled {
+    opacity: .6;
+    cursor: wait;
 }
 
 .mesaj {
@@ -265,78 +256,84 @@ input[type=text]:focus {
     padding: 12px 14px;
     border-radius: 9px;
     font-size: 13px;
-    margin-bottom: 12px
 }
 
+.mesaj.eroare {
+    background: #fff0f2;
+    color: #bd4056;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* Albumele și fotografiile */
 .colectie {
     border-top: 1px solid #e9e9f3;
-    padding: 38px 0 90px
+    padding: 38px 0 90px;
 }
 
 .sectiune-titlu {
     display: flex;
-    align-items: end;
     justify-content: space-between;
-    margin-bottom: 26px
+    align-items: end;
+    margin-bottom: 26px;
 }
 
 .subtitlu {
     letter-spacing: 2px;
     font-size: 10px;
-    font-weight: 800;
-    color: #8a78e5
+    font-weight: bold;
+    color: #8a78e5;
 }
 
 .sectiune-titlu h2 {
     margin: 11px 0 0;
     font-size: 29px;
-    letter-spacing: -1px
 }
 
 .sectiune-titlu h2 span {
     font-size: 19px;
-    color: #a8a8bb
+    color: #a8a8bb;
 }
 
 .colectie-info {
+    color: #a2a1b2;
     font-size: 12px;
-    color: #a2a1b2
-}
-
-.gol {
-    background: #fff;
-    border: 1px dashed #ded9f1;
-    border-radius: 19px;
-    text-align: center;
-    padding: 70px 20px
-}
-
-.gol-icon {
-    font-size: 47px;
-    color: #8976e7;
-    background: #f2efff;
-    height: 90px;
-    width: 90px;
-    border-radius: 24px;
-    display: grid;
-    place-items: center;
-    margin: 0 auto 22px
-}
-
-.gol h3 {
-    font-size: 19px;
-    margin: 0 0 9px
-}
-
-.gol p {
-    color: #a4a4b4;
-    margin: 0;
-    font-size: 13px
 }
 
 .lista-albume {
     display: grid;
-    gap: 24px
+    gap: 24px;
+}
+
+.gol {
+    background: white;
+    border: 1px dashed #ded9f1;
+    border-radius: 19px;
+    text-align: center;
+    padding: 65px 20px;
+}
+
+.gol-icon {
+    display: grid;
+    place-items: center;
+    width: 90px;
+    height: 90px;
+    margin: 0 auto 22px;
+    border-radius: 24px;
+    background: #f2efff;
+    color: #8976e7;
+    font-size: 47px;
+}
+
+.gol h3 {
+    margin: 0 0 10px;
+}
+
+.gol p {
+    color: #a4a4b4;
+    font-size: 13px;
 }
 
 .album {
@@ -344,44 +341,41 @@ input[type=text]:focus {
     border: 1px solid #eeecf6;
     border-radius: 19px;
     padding: 23px;
-    box-shadow: 0 10px 25px #29275307
+    box-shadow: 0 10px 25px #29275307;
 }
 
 .album-header {
     display: flex;
     justify-content: space-between;
-    gap: 15px;
     align-items: center;
-    margin-bottom: 18px
+    gap: 15px;
+    margin-bottom: 18px;
 }
 
 .album-header>div {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    column-gap: 12px;
-    align-items: center
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
 .album-icon {
-    grid-row: span 2;
     background: #f1edff;
     color: #7765e1;
     padding: 11px;
     border-radius: 10px;
-    font-size: 20px
+    font-size: 20px;
 }
 
 .album h3 {
     margin: 0;
     font-size: 18px;
-    letter-spacing: -.4px;
-    overflow-wrap: anywhere
+    overflow-wrap: anywhere;
 }
 
 .album-header p {
-    margin: 4px 0 0;
+    margin: 5px 0 0;
     color: #a3a1b5;
-    font-size: 12px
+    font-size: 12px;
 }
 
 .buton-stergere {
@@ -390,37 +384,35 @@ input[type=text]:focus {
     color: #d35b6d;
     border-radius: 9px;
     padding: 10px 13px;
-    font-size: 12px;
-    cursor: pointer
-}
-
-.buton-stergere:hover {
-    background: #ffe5e9
+    cursor: pointer;
 }
 
 .galerie {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
-    gap: 12px
+    gap: 12px;
 }
 
-.galerie a {
+.foto {
     display: block;
+    padding: 0;
+    border: 0;
     border-radius: 12px;
     overflow: hidden;
-    background: #f4f3fb
+    cursor: zoom-in;
+    background: #f4f3fb;
 }
 
-.galerie img {
+.foto img {
     width: 100%;
     height: 178px;
     display: block;
     object-fit: cover;
-    transition: transform .25s
+    transition: transform .25s;
 }
 
-.galerie a:hover img {
-    transform: scale(1.06)
+.foto:hover img {
+    transform: scale(1.06);
 }
 
 footer {
@@ -428,103 +420,109 @@ footer {
     padding: 25px 0;
     text-align: center;
     color: #a4a2b4;
-    font-size: 12px
+    font-size: 12px;
 }
 
 footer span {
     color: #8978e8;
-    padding: 0 8px
+    padding: 0 8px;
 }
 
-@media(max-width:820px) {
+/* Fotografie mărită */
+dialog {
+    border: 0;
+    border-radius: 15px;
+    padding: 13px;
+    max-width: min(900px, 95vw);
+    background: white;
+}
+
+dialog::backdrop {
+    background: #151323c9;
+}
+
+dialog img {
+    display: block;
+    max-width: 100%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
+#inchide {
+    float: right;
+    margin: 0 0 8px;
+    border: 0;
+    background: #f1edff;
+    border-radius: 8px;
+    padding: 5px 13px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+@media (max-width: 820px) {
     .introducere {
         grid-template-columns: 1fr;
         gap: 30px;
-        padding: 46px 0
-    }
-
-    .prezentare h1 {
-        max-width: 600px
+        padding: 45px 0;
     }
 
     .formular {
         max-width: 600px;
         width: 100%;
-        margin: auto
-    }
-
-    .colectie {
-        padding-top: 30px
+        margin: auto;
     }
 }
 
-@media(max-width:540px) {
+@media (max-width: 540px) {
     .container {
-        padding: 0 16px
+        padding: 0 16px;
     }
 
     .bara {
-        height: 72px
+        height: 72px;
     }
 
     .logo {
-        font-size: 18px
+        font-size: 18px;
     }
 
     .simbol {
-        width: 31px;
-        height: 31px;
-        font-size: 22px
+        width: 32px;
+        height: 32px;
+        font-size: 22px;
     }
 
     .eticheta {
         font-size: 10px;
-        padding: 8px
-    }
-
-    .introducere {
-        padding: 36px 0
+        padding: 8px;
     }
 
     .prezentare h1 {
-        letter-spacing: -1.1px
+        letter-spacing: -1px;
     }
 
     .formular {
-        padding: 22px
-    }
-
-    .sectiune-titlu {
-        align-items: start;
-        gap: 10px
+        padding: 22px;
     }
 
     .colectie-info {
-        display: none
+        display: none;
+    }
+
+    .album {
+        padding: 15px;
+    }
+
+    .album h3 {
+        font-size: 15px;
     }
 
     .galerie {
         grid-template-columns: repeat(2, minmax(0, 1fr));
-        gap: 9px
+        gap: 9px;
     }
 
-    .galerie img {
-        height: 145px
-    }
-
-    .album {
-        padding: 15px
-    }
-
-    .album-header {
-        align-items: start
-    }
-
-    .buton-stergere {
-        padding: 9px
-    }
-
-    .album h3 {
-        font-size: 15px
+    .foto img {
+        height: 145px;
     }
 }

@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FotoAlbum | Generator de albume foto</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <header class="bara">
+      <div class="logo"><span class="simbol">▦</span> Foto<span>Album</span></div>
+      <span class="eticheta">Proiect individual · Săptămâna 9</span>
+    </header>
+
+    <main>
+      <section class="introducere">
+        <div class="prezentare">
+          <span class="eticheta-mica">✦ Momentele tale, într-un singur loc</span>
+          <h1>Amintirile merită un <em>album frumos.</em></h1>
+          <p>Creează albume foto în câteva secunde. Alege fotografiile preferate și păstrează-le organizate într-o galerie modernă.</p>
+          <div class="statistici">
+            <div><strong id="total-albume">0</strong><span>Albume create</span></div>
+            <div class="linie"></div>
+            <div><strong id="total-poze">0</strong><span>Fotografii salvate</span></div>
+          </div>
+        </div>
+
+        <div class="formular">
+          <div class="antet-formular">
+            <span class="iconita">＋</span>
+            <div><h2>Album nou</h2><p>Completează câmpurile de mai jos</p></div>
+          </div>
+          <p id="mesaj" class="mesaj" role="status" hidden></p>
+          <form id="formular-album">
+            <label for="titlu">Numele albumului</label>
+            <input type="text" id="titlu" maxlength="70" placeholder="Ex: Vacanța de vară" required>
+
+            <label for="poze">Fotografiile tale</label>
+            <div class="zona-upload">
+              <span class="upload-icon">↥</span>
+              <span>Alege fotografiile din calculator</span>
+              <small>JPG, PNG, WEBP · maximum 10 fotografii</small>
+              <input type="file" id="poze" accept="image/jpeg,image/png,image/webp" multiple required>
+              <small id="selectate">Nicio fotografie selectată</small>
+            </div>
+            <button id="buton-creare" class="buton-principal" type="submit">＋ Creează albumul</button>
+          </form>
+        </div>
+      </section>
+
+      <section class="colectie">
+        <div class="sectiune-titlu">
+          <div>
+            <span class="subtitlu">COLECȚIA MEA</span>
+            <h2>Albumele tale <span id="numar-albume">(0)</span></h2>
+          </div>
+          <span class="colectie-info">Salvate în acest browser</span>
+        </div>
+        <div id="lista-albume" class="lista-albume"></div>
+      </section>
+    </main>
+
+    <footer>Creat cu HTML, CSS și JavaScript <span>•</span> Studiu individual – Săptămâna 9</footer>
+  </div>
+
+  <dialog id="vizualizare">
+    <button id="inchide" type="button" aria-label="Închide imaginea">×</button>
+    <img id="imagine-mare" alt="Fotografie mărită">
+  </dialog>
+</body>
+</html>
